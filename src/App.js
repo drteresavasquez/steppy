@@ -25,8 +25,8 @@ class App extends Component {
 
   render() {
     return (
-    <h1>This is a page</h1>
-    // <Route exact path={'/'} component={() => <Home data={this.state.lessons}/>} />
+    // <h1>This is a page</h1>
+    <Route exact path={'/'} component={() => <Home data={this.state.lessons}/>} />
     );
   }
 }

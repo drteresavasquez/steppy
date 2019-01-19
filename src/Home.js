@@ -7,7 +7,7 @@ import { Container } from 'semantic-ui-react'
 class Home extends Component {
   render() {
       console.log(this.props.data);
-    const lessons = this.props.data[0].map((lesson, i)=>{
+    const lessons = this.props.data.map((lesson, i)=>{
       return(
         <Button 
             key={i}
