@@ -1,18 +1,19 @@
 import React, { Component } from 'react';
-import data from './data.json'
+// import data from './data.json'
 import './App.css';
 import { Button } from 'semantic-ui-react'
 import { Container } from 'semantic-ui-react'
 
 class Home extends Component {
   render() {
-
-    const lessons = data.lessons.map((lesson, i)=>{
+      console.log(this.props.data);
+    const lessons = this.props.data[0].map((lesson, i)=>{
       return(
         <Button 
-          content={lesson.title}
-          size='massive'
-          primary
+            key={i}
+            content={lesson.title}
+            size='massive'
+            primary
         />
       )
     })
