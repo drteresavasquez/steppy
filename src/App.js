@@ -9,14 +9,18 @@ class App extends Component {
 
     const lessons = data.lessons.map((lesson, i)=>{
       return(
-        <Button content={lesson.title} primary />
+        <Button 
+          content={lesson.title}
+          size='massive'
+          primary
+        />
       )
     })
 
     console.log(data.lessons);
     return (
       <Container>
-        {lessons}
+          {lessons}
       </Container>
     );
   }
