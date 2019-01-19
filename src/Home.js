@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
 import data from './data.json'
-import './App.css';
 import { Button } from 'semantic-ui-react'
 import { Container } from 'semantic-ui-react'
+import './App.css';
 
 class Home extends Component {
   render() {
