@@ -7,24 +7,26 @@
             "color2": "string",
             "steps": [
                 {
+                    "step_index": 1,
                     "step_description":"list",
-                    "step_img":"string",
-                    "example_img":"list",
-                    "ex_description":"string"
+                    "step_img":"https://placehold.it/50x50/00ffff/282828",
+                    "ex_description":"string",
+                    "example_img":"https://placehold.it/50x50/00ffff/282828"
                 },
                 {
+                    "step_index": 2,
                     "step_description":"list",
-                    "step_img":"string",
-                    "example_img":"list",
-                    "ex_description":"string"
+                    "step_img":"https://placehold.it/50x50/00ffff/282828",
+                    "ex_description":"string",
+                    "example_img":"https://placehold.it/50x50/00ffff/282828"
                 },
                 {
+                    "step_index": 3,
                     "step_description":"list",
-                    "step_img":"string",
-                    "example_img":"list",
-                    "ex_description":"string"
+                    "step_img":"https://placehold.it/50x50/00ffff/282828",
+                    "ex_description":"string",
+                    "example_img":"https://placehold.it/50x50/00ffff/282828"
                 }
-                
             ]
 
         }

@@ -1,40 +1,27 @@
 import React, { Component } from 'react';
 import data from './data.json'
 import './App.css';
-import { Button } from 'react-bootstrap';
+import { Card } from 'semantic-ui-react'
 
 class App extends Component {
   render() {
-    const lessons = data.lessons.map((lesson, i)=>{
+    console.log(data.lessons[0].steps);
+    const lessons = data.lessons[0].steps.map((lesson, i)=>{
       return(
-      <LessonTemplate
+        <Card raised 
         key={i}
-        title={lesson.title}
-        color1={lesson.color1}
-        color2={lesson.color2}
-      />
+        image={lesson.step_img} />
       )
     })
 
     console.log(data.lessons);
     return (
       <div>
-        {lessons}
+        <Card.Group itemsPerRow={3}>
+          {lessons}
+        </Card.Group>
       </div>
     );
-  }
-}
-
-class LessonTemplate extends React.Component {
-  render(){
-    return(
-      <>
-        <h1>{this.props.title}</h1>
-        <p>{this.props.color1}</p>
-        <p>{this.props.color2}</p>
-        <Button bsStyle="primary">Primary</Button>
-      </>
-    )
   }
 }
 
