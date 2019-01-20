@@ -9,6 +9,11 @@ body {
 
 }
 
+.heading {
+  font-family: 'Neucha', sans-serif;
+  font-weight: 700;
+}
+
  
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",

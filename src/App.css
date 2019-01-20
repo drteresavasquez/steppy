@@ -1,7 +1,9 @@
-
-
-
 body {
-   background: rgb(240, 217, 230);
+   background: lightcyan;
+}
+
+.ui.massive.button { 
+    font-family: 'Neucha', cursive;
+    width: 200px;
 }
 

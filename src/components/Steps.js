@@ -80,7 +80,7 @@ export default class Steps extends Component {
             return(
             <div style={divStyle}>
             <div className="frame-container">
-                <h1>Step {this.state.currentStep + 1}: {this.state.title}</h1>
+                <h1 className="heading">Step {this.state.currentStep + 1}: {this.state.title}</h1>
                 {ExampleModal(this.state.steps[this.state.currentStep])}
                 <div className="flex-container">
                     <p className="stepItem">{this.state.steps[this.state.currentStep].step_description}</p>

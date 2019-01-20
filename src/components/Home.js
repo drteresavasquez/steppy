@@ -43,7 +43,7 @@ class Home extends Component {
         })
       return(
         <Container style={style}>
-          <h2>Hey, Thomais! Let's Learn Some Stuff!</h2>
+          <h1 className="heading">Hey, Thomais! Let's Learn Some Stuff!</h1>
           {lessons}
         </Container>
        
