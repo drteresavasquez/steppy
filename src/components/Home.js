@@ -30,7 +30,8 @@ class Home extends Component {
       const lessons =  this.props.data.map((lesson, i)=>{
         return(
           <>
-          <Button 
+          <Button
+              style={{backgroundImage:`linear-gradient(to bottom, ${lesson.color1} 30%, ${lesson.color2} 90%)`, height:`200px`, borderRadius:`30px`, margin:`15px`}}
               key={lesson.id}
               content={lesson.title}
               size='massive'
