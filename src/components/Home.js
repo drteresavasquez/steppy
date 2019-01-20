@@ -1,6 +1,7 @@
 import React, { Component } from 'react';
 import { Button } from 'semantic-ui-react';
 import { Container } from 'semantic-ui-react';
+import Steps from './Steps';
 import './../App.css';
 
 
@@ -13,7 +14,7 @@ class Home extends Component {
   }
 
   loadLesson = (id) => {
-    console.log(this.state.lessons[id]);
+    // console.log(this.state.lessons[id]);
     const thisLesson = this.state.lessons[id];
     this.setState({
       currentLesson: thisLesson,
@@ -21,12 +22,6 @@ class Home extends Component {
       showButtons: false
     })
 }
-
-  showLesson = () => {
-    return(
-      <h1>{this.state.currentLesson.title}</h1>
-     ) 
-  }
 
   showOnDOM = () => {
     if(this.state.showButtons){
@@ -45,7 +40,10 @@ class Home extends Component {
       )
     }else{
       return(
-        <h1>{this.state.currentLesson.title}</h1>
+        <>
+        {/* <h1>{this.state.currentLesson.title}</h1> */}
+        <Steps data={this.state.currentLesson}/>
+        </>
       )
     }
   }
