@@ -4,13 +4,13 @@ import './App.css';
 import Home from './components/Home';
 import AddLesson from './components/AddLesson';
 import Steps from './components/Steps';
-// import data from './data.json';
 
 class App extends Component {
   state={
     userName: "Thomais",
     lessons: []
   }
+
   componentDidMount(){
     fetch(`https://teamthomais.herokuapp.com/lessons/${this.state.userName}`)
     .then((data)=>{
@@ -20,7 +20,6 @@ class App extends Component {
         this.setState({
             lessons: userLessons
         })
-        console.log(userLessons)
     })
   }
   render() {
@@ -28,7 +27,6 @@ class App extends Component {
       <>
     <Switch>
       <Route exact path={'/'} component={() => <Home data={this.state.lessons}/>} />
-      <Route path="/:id" component={Steps} />
       <Route exact path={'/addlesson'} component={() => <AddLesson />} />
       <Route exact path={'/steps'} component={() => <Steps />} />
       {/* <Route component={() => <Home data={data}/>} /> */}
