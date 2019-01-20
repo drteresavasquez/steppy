@@ -20,3 +20,16 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
     monospace;
 }
+
+@media only screen and (max-width: 600px) {
+  body {
+    font-size: 1.5em;
+  
+  }
+}
+
+@media only screen and (max-width: 1024px) {
+  body {
+    font-size: 1.5em;
+  }
+}

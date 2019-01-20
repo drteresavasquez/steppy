@@ -19,7 +19,7 @@
 
 .stepItem img{
     padding-left:15%;
-    width: 70%;
+    width: 80%;
     margin: auto;
 }
 
@@ -31,5 +31,22 @@
     .stepItem img{
         width: 100%;
         margin: auto;
+    }
+    .frame-container {
+        height:100%;
+    }
+  }
+
+  @media only screen and (max-width: 1024px) {
+    /* .stepItem {
+        width: 100%;
+    }
+
+    .stepItem img{
+        width: 100%;
+        margin: auto;
+    } */
+    .frame-container {
+        height:100vh;
     }
   }
