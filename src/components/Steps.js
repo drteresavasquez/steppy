@@ -15,7 +15,7 @@ export default class Steps extends Component {
           })
     }
         render(){
-            const imgUrl = '../img/screen_plain.png';
+            
             const divStyle = { 
                 backgroundColor: `${this.state.bgColor}`
             };
