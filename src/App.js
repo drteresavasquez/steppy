@@ -2,8 +2,6 @@ import React, { Component } from 'react';
 import { Route, Switch } from 'react-router-dom';
 import './App.css';
 import Home from './components/Home';
-import AddLesson from './components/AddLesson';
-import Steps from './components/Steps';
 
 class App extends Component {
   state={
@@ -27,8 +25,6 @@ class App extends Component {
       <>
     <Switch>
       <Route exact path={'/'} component={() => <Home data={this.state.lessons}/>} />
-      <Route exact path={'/addlesson'} component={() => <AddLesson />} />
-      <Route exact path={'/steps'} component={() => <Steps />} />
       <Route component={() => <Home data={this.state.lessons}/>} />
     </Switch>
     </>
