@@ -27,7 +27,7 @@ export default class Navigation extends React.Component {
           }
         
           if (this.state.toAdmin) {
-            return window.location ='https://teamthomais.herokuapp.com/test';
+            return window.location ='https://teamthomais.herokuapp.com/admin';
           }
         return(
             <Menu>
