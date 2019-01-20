@@ -37,7 +37,5 @@ export default class Steps extends Component {
             </div>
         </div>
         )
-
-   
     } 
 }

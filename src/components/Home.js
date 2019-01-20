@@ -24,23 +24,26 @@ class Home extends Component {
 
   showOnDOM = () => {
     if(this.state.showButtons){
+      const lessons =  this.props.data.map((lesson, i)=>{
+        return(
+          <Button 
+              key={lesson.id}
+              content={lesson.title}
+              size='massive'
+              primary
+              onClick={()=>{this.loadLesson(i)}}
+          />
+        )
+        })
       return(
-        this.props.data.map((lesson, i)=>{
-          return(
-            <Button 
-                key={lesson.id}
-                content={lesson.title}
-                size='massive'
-                primary
-                onClick={()=>{this.loadLesson(i)}}
-            />
-          )
-          })
+        <Container>
+          {lessons}
+        </Container>
+       
       )
     }else{
       return(
         <>
-        {/* <h1>{this.state.currentLesson.title}</h1> */}
         <Steps data={this.state.currentLesson}/>
         </>
       )
@@ -51,9 +54,7 @@ class Home extends Component {
     return (
       <>
       <Nav />
-      <Container>
           {this.showOnDOM()}
-      </Container>
       </>
     );
   }
