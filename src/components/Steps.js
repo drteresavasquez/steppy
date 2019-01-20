@@ -7,7 +7,8 @@ export default class Steps extends Component {
         toDashboard: false,
         steps: this.props.data.steps,
         title: this.props.data.title,
-        bgColor: this.props.data.color1,
+        bgColor1: this.props.data.color1,
+        bgColor2: this.props.data.color2,
         currentStep:0
     }
 
@@ -34,9 +35,9 @@ export default class Steps extends Component {
                 <Button 
                     labelPosition='left'
                     content=" Previous Step"
-                    size='massive'
+                    size='large'
                     icon='arrow left'
-                    primary
+                    color='pink'
                     onClick={()=>{this.previousStep(this.state.currentStep)}}
                 />
             )
@@ -49,9 +50,9 @@ export default class Steps extends Component {
                 <Button
                     labelPosition='right'
                     content=" Next Step"
-                    size='massive'
+                    size='large'
                     icon='right arrow'
-                    primary
+                    color='teal'
                     onClick={()=>{this.nextStep(this.state.currentStep)}}
                 />
             )
@@ -59,9 +60,9 @@ export default class Steps extends Component {
             return(
             <Button 
                     content=" Return Home"
-                    size='massive'
+                    size='large'
                     icon='home'
-                    primary
+                    color='teal'
                     onClick={()=>{this.handleSubmit()}}
                 />
             )
@@ -73,7 +74,7 @@ export default class Steps extends Component {
               }
 
             const divStyle = { 
-                backgroundColor: `${this.state.bgColor}`
+                backgroundImage:`linear-gradient(to right, ${this.state.bgColor1} 30%, ${this.state.bgColor2} 90%)`
             };
 
             return(
@@ -82,8 +83,8 @@ export default class Steps extends Component {
                 <h1>Step {this.state.currentStep + 1}: {this.state.title}</h1>
                 {ExampleModal(this.state.steps[this.state.currentStep])}
                 <div className="flex-container">
-                    <p>{this.state.steps[this.state.currentStep].step_description}</p>
-                    <img src={this.state.steps[this.state.currentStep].step_img} alt="this.props.step_description"/>
+                    <p className="stepItem">{this.state.steps[this.state.currentStep].step_description}</p>
+                    <div className="stepItem"><img src={this.state.steps[this.state.currentStep].step_img} alt="this.props.step_description"/></div>
                 </div>
                 {this.previousButton()}
                 {this.nextButton()}
@@ -94,14 +95,15 @@ export default class Steps extends Component {
 }
 
 const ExampleModal = (example) => (
-    <Modal trigger={<Button size='small'>Example</Button>}>
+    <Modal trigger={<Button size='medium' color='purple'>See Example</Button>} closeIcon>
       <Modal.Header>Here is an example</Modal.Header>
       <Modal.Content image>
-        <Image wrapped size='medium' src={example.example_img} />
+        <Image wrapped size='large' src={example.example_img} />
         <Modal.Description>
           <p>{example.ex_description}</p>
         </Modal.Description>
       </Modal.Content>
     </Modal>
   )
+
   
