@@ -8,14 +8,14 @@ import Steps from './components/Steps';
 
 class App extends Component {
   state={
-    userName: "thomais",
+    userName: "Thomais",
     lessons: []
   }
   componentDidMount(){
     fetch(`https://teamthomais.herokuapp.com/lessons/${this.state.userName}`)
     .then((data)=>{
       console.log(data);
-        // return data.json();
+        return data.json();
     }).then((userLessons)=>{
         this.setState({
             lessons: userLessons
@@ -28,6 +28,7 @@ class App extends Component {
   render() {
     return (
       <>
+      <h1>This is a</h1>
     <Switch>
       <Route exact path={'/'} component={() => <Home data={this.state.lessons}/>} />
       <Route path="/:id" component={Steps} />
