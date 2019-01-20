@@ -8,6 +8,14 @@ This app was built using ReactJS, Python 2.7, and Flask.
 
 Backend Repo: https://github.com/theriley106/Steppy
 
+## Team
+- [Dr. Teresa Vasquez](http://drteresavasquez.com) - Developer
+- Apperson Johnson - Developer
+- [Chris Lambert](https://github.com/theriley106) - Developer
+- Natalie Nigro - Design
+- Jess Nelson - Design Consultant
+- Evan Segual - Research
+
 ## Problem:
 - Finding a solution when presented with a problem that isn’t familiar to her
 - “Learning how to learn”
