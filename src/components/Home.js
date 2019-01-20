@@ -23,9 +23,13 @@ class Home extends Component {
 }
 
   showOnDOM = () => {
+    const style = {
+      textAlign: "center"
+    }
     if(this.state.showButtons){
       const lessons =  this.props.data.map((lesson, i)=>{
         return(
+          <>
           <Button 
               key={lesson.id}
               content={lesson.title}
@@ -33,10 +37,12 @@ class Home extends Component {
               primary
               onClick={()=>{this.loadLesson(i)}}
           />
+          </>
         )
         })
       return(
-        <Container>
+        <Container style={style}>
+          <h2>Hey, Thomais! Let's Learn Some Stuff!</h2>
           {lessons}
         </Container>
        

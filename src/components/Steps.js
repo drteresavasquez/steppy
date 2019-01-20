@@ -1,21 +1,75 @@
 import React, { Component } from 'react';
 import { Button, Image, Modal } from 'semantic-ui-react'
+import { Redirect } from 'react-router-dom';
 import './Steps.css';
 export default class Steps extends Component {
     state={
+        toDashboard: false,
         steps: this.props.data.steps,
         title: this.props.data.title,
         bgColor: this.props.data.color1,
         currentStep:0
     }
 
-    nextLesson = (num)=>{
+    handleSubmit = () => {
+        this.setState({
+            toDashboard: true
+          })
+      }
+
+    nextStep = (num)=>{
         this.setState({
             currentStep:num+1
           })
     }
+    previousStep = (num)=>{
+        this.setState({
+            currentStep:num-1
+          })
+    }
+
+    previousButton = () =>{
+        if(this.state.currentStep!==0){
+            return(
+                <Button 
+                    content=" Previous Step"
+                    size='massive'
+                    icon='arrow left'
+                    primary
+                    onClick={()=>{this.previousStep(this.state.currentStep)}}
+                />
+            )
+        }
+    }
+
+    nextButton = () => {
+        if(this.state.currentStep+1 < this.props.data.steps.length){
+            return(
+                <Button 
+                    content=" Next Step"
+                    size='massive'
+                    icon='arrow right'
+                    primary
+                    onClick={()=>{this.nextStep(this.state.currentStep)}}
+                />
+            )
+        }else{
+            return(
+            <Button 
+                    content=" Return Home"
+                    size='massive'
+                    icon='home'
+                    primary
+                    onClick={()=>{this.handleSubmit()}}
+                />
+            )
+        }
+    }
         render(){
-            
+            if (this.state.toDashboard) {
+                return <Redirect to='/' />
+              }
+
             const divStyle = { 
                 backgroundColor: `${this.state.bgColor}`
             };
@@ -29,12 +83,8 @@ export default class Steps extends Component {
                     <p>{this.state.steps[this.state.currentStep].step_description}</p>
                     <img src={this.state.steps[this.state.currentStep].step_img} alt="this.props.step_description"/>
                 </div>
-                <Button 
-                    content="Next Step"
-                    size='massive'
-                    primary
-                    onClick={()=>{this.nextLesson(this.state.currentStep)}}
-                />
+                {this.previousButton()}
+                {this.nextButton()}
             </div>
         </div>
         )

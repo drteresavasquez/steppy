@@ -1,0 +1,9 @@
+.ui.menu {
+    background: none;
+    border: none;
+    box-shadow: none;
+}
+
+.ui.menu .item:before {
+    width: 0px;
+}

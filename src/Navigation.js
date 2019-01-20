@@ -2,6 +2,7 @@ import React from 'react';
 import { Menu } from 'semantic-ui-react'
 import { Redirect } from 'react-router-dom';
 import { Icon } from 'semantic-ui-react'
+import './Navigation.css'
 
 export default class Navigation extends React.Component {
     state={
