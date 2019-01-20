@@ -1,6 +1,65 @@
 {
-    "userName": "string",
-    "lessons": [
+    "Thomias": [
+        {
+            "title": "string",
+            "color1": "string",
+            "color2": "string",
+            "steps": [
+                {
+                    "step_index": 1,
+                    "step_description":"list",
+                    "step_img":"https://placehold.it/50x50/00ffff/282828",
+                    "ex_description":"string",
+                    "example_img":"https://placehold.it/50x50/00ffff/282828"
+                },
+                {
+                    "step_index": 2,
+                    "step_description":"list",
+                    "step_img":"https://placehold.it/50x50/00ffff/282828",
+                    "ex_description":"string",
+                    "example_img":"https://placehold.it/50x50/00ffff/282828"
+                },
+                {
+                    "step_index": 3,
+                    "step_description":"list",
+                    "step_img":"https://placehold.it/50x50/00ffff/282828",
+                    "ex_description":"string",
+                    "example_img":"https://placehold.it/50x50/00ffff/282828"
+                }
+            ]
+
+        },
+        {
+            "title": "string",
+            "color1": "string",
+            "color2": "string",
+            "steps": [
+                {
+                    "step_index": 1,
+                    "step_description":"list",
+                    "step_img":"https://placehold.it/50x50/00ffff/282828",
+                    "ex_description":"string",
+                    "example_img":"https://placehold.it/50x50/00ffff/282828"
+                },
+                {
+                    "step_index": 2,
+                    "step_description":"list",
+                    "step_img":"https://placehold.it/50x50/00ffff/282828",
+                    "ex_description":"string",
+                    "example_img":"https://placehold.it/50x50/00ffff/282828"
+                },
+                {
+                    "step_index": 3,
+                    "step_description":"list",
+                    "step_img":"https://placehold.it/50x50/00ffff/282828",
+                    "ex_description":"string",
+                    "example_img":"https://placehold.it/50x50/00ffff/282828"
+                }
+            ]
+
+        }
+    ],
+    "Teresa": [
         {
             "title": "string",
             "color1": "string",
