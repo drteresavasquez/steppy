@@ -85,7 +85,7 @@ export default class Steps extends Component {
                 {ExampleModal(this.state.steps[this.state.currentStep])}
                 <div className="flex-container">
                     <p className="stepItem">{this.state.steps[this.state.currentStep].step_description}</p>
-                    <div className="stepItem"><img src={this.state.steps[this.state.currentStep].step_img} alt="this.props.step_description"/></div>
+                    <div className="stepItem"><img src={this.state.steps[this.state.currentStep].step_img} alt={this.props.step_description}/></div>
                 </div>
                 {this.previousButton()}
                 {this.nextButton()}
@@ -99,7 +99,7 @@ const ExampleModal = (example) => (
     <Modal trigger={<Button size='medium' color='purple'>See Example</Button>} closeIcon>
       <Modal.Header>Here is an example</Modal.Header>
       <Modal.Content image>
-        <Image wrapped size='large' src={example.example_img} />
+        <Image wrapped size='large' src={example.example_img} alt={example.ex_description}/>
         <Modal.Description>
           <p className="modal-font">{example.ex_description}</p>
         </Modal.Description>
