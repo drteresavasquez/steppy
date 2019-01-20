@@ -7,8 +7,8 @@ export default class Steps extends Component {
         toDashboard: false,
         steps: this.props.data.steps,
         title: this.props.data.title,
-        bgColor1: this.props.data.color1,
-        bgColor2: this.props.data.color2,
+        bgColor1: `#${this.props.data.color1}`,
+        bgColor2: `#${this.props.data.color2}`,
         currentStep:0
     }
 
@@ -68,6 +68,7 @@ export default class Steps extends Component {
             )
         }
     }
+    
         render(){
             if (this.state.toDashboard) {
                 return <Redirect to='/' />
@@ -75,7 +76,7 @@ export default class Steps extends Component {
 
             const divStyle = { 
                 backgroundImage:`linear-gradient(to right, ${this.state.bgColor1} 30%, ${this.state.bgColor2} 90%)`,
-                height:`100%`
+                // opacity: '0.4'
             };
 
             return(
