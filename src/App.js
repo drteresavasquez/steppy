@@ -29,7 +29,7 @@ class App extends Component {
       <Route exact path={'/'} component={() => <Home data={this.state.lessons}/>} />
       <Route exact path={'/addlesson'} component={() => <AddLesson />} />
       <Route exact path={'/steps'} component={() => <Steps />} />
-      {/* <Route component={() => <Home data={data}/>} /> */}
+      <Route component={() => <Home data={this.state.lessons}/>} />
     </Switch>
     </>
     );
