@@ -31,13 +31,24 @@ export default class Steps extends Component {
 
 class Frame extends Component {
     render(){
+
+        var imgUrl = '../img/screen_plain.png';
+        var divStyle = { 
+            background: '#eeeeff', 
+
+           
+         };
+
+
         return(
+            <div style={divStyle}>
             <div className="frame-container">
                 <h1>Step {this.props.step}: {this.props.title}</h1>
                 <div className="flex-container">
                     <p>{this.props.step_description}</p>
                     <img src={this.props.step_img} alt="this.props.step_description"/>
                 </div>
+            </div>
             </div>
         )
     }
