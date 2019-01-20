@@ -1,18 +1,23 @@
 import React, { Component } from 'react';
 // import data from './data.json'
-import './App.css';
 import { Button } from 'semantic-ui-react'
 import { Container } from 'semantic-ui-react'
 
 class Home extends Component {
+
+  openLesson = (id) => {
+    console.log("Lesson id", id);
+  }
+
   render() {
-    const lessons = this.props.data.Thomias.map((lesson, i)=>{
+    const lessons = this.props.data.map((lesson)=>{
       return(
         <Button 
-            key={i}
+            key={lesson.id}
             content={lesson.title}
             size='massive'
             primary
+            onClick={()=>{this.openLesson(lesson.id)}}
         />
       )
     })
