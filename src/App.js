@@ -23,12 +23,9 @@ class App extends Component {
         console.log(userLessons)
     })
   }
-
-
   render() {
     return (
       <>
-      <h1>This is a</h1>
     <Switch>
       <Route exact path={'/'} component={() => <Home data={this.state.lessons}/>} />
       <Route path="/:id" component={Steps} />
