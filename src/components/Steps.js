@@ -74,7 +74,8 @@ export default class Steps extends Component {
               }
 
             const divStyle = { 
-                backgroundImage:`linear-gradient(to right, ${this.state.bgColor1} 30%, ${this.state.bgColor2} 90%)`
+                backgroundImage:`linear-gradient(to right, ${this.state.bgColor1} 30%, ${this.state.bgColor2} 90%)`,
+                height:`100%`
             };
 
             return(
