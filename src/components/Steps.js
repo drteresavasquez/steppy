@@ -32,6 +32,7 @@ export default class Steps extends Component {
         if(this.state.currentStep!==0){
             return(
                 <Button 
+                    labelPosition='left'
                     content=" Previous Step"
                     size='massive'
                     icon='arrow left'
@@ -45,10 +46,11 @@ export default class Steps extends Component {
     nextButton = () => {
         if(this.state.currentStep+1 < this.props.data.steps.length){
             return(
-                <Button 
+                <Button
+                    labelPosition='right'
                     content=" Next Step"
                     size='massive'
-                    icon='arrow right'
+                    icon='right arrow'
                     primary
                     onClick={()=>{this.nextStep(this.state.currentStep)}}
                 />
