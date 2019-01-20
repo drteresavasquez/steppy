@@ -3,7 +3,8 @@ import './Steps.css';
 export default class Steps extends Component {
     state={
         steps: this.props.data.steps,
-        title: this.props.data.title
+        title: this.props.data.title,
+        currentStep:1
     }
 
     render(){

@@ -3,8 +3,7 @@ import { Button } from 'semantic-ui-react';
 import { Container } from 'semantic-ui-react';
 import Steps from './Steps';
 import './../App.css';
-
-
+import Nav from './../Navigation';
 class Home extends Component {
   state = {
     lessons: this.props.data,
@@ -50,9 +49,12 @@ class Home extends Component {
 
   render() {
     return (
+      <>
+      <Nav />
       <Container>
           {this.showOnDOM()}
       </Container>
+      </>
     );
   }
 }
