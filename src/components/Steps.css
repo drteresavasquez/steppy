@@ -5,6 +5,10 @@
     margin-top: -15px;
 }
 
+.modal-font {
+    font-size: 2em;
+}
+
 .flex-container {
     display: flex;
     flex-wrap: wrap;

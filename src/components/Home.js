@@ -13,7 +13,6 @@ class Home extends Component {
   }
 
   loadLesson = (id) => {
-    // console.log(this.state.lessons[id]);
     const thisLesson = this.state.lessons[id];
     this.setState({
       currentLesson: thisLesson,

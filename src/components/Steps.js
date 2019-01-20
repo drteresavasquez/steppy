@@ -7,8 +7,8 @@ export default class Steps extends Component {
         toDashboard: false,
         steps: this.props.data.steps,
         title: this.props.data.title,
-        bgColor1: `#${this.props.data.color1}`,
-        bgColor2: `#${this.props.data.color2}`,
+        bgColor1: `#5C${this.props.data.color1}`,
+        bgColor2: `#5C${this.props.data.color2}`,
         currentStep:0
     }
 
@@ -56,7 +56,7 @@ export default class Steps extends Component {
                     onClick={()=>{this.nextStep(this.state.currentStep)}}
                 />
             )
-        }else{
+        } else {
             return(
             <Button 
                     content=" Return Home"
@@ -75,8 +75,7 @@ export default class Steps extends Component {
               }
 
             const divStyle = { 
-                backgroundImage:`linear-gradient(to right, ${this.state.bgColor1} 30%, ${this.state.bgColor2} 90%)`,
-                // opacity: '0.4'
+                backgroundImage:`linear-gradient(to left, ${this.state.bgColor1} 30%, ${this.state.bgColor2} 90%)`,
             };
 
             return(
@@ -102,7 +101,7 @@ const ExampleModal = (example) => (
       <Modal.Content image>
         <Image wrapped size='large' src={example.example_img} />
         <Modal.Description>
-          <p>{example.ex_description}</p>
+          <p className="modal-font">{example.ex_description}</p>
         </Modal.Description>
       </Modal.Content>
     </Modal>
